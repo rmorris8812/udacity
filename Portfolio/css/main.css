@@ -1,0 +1,159 @@
+* {
+    /*border: 1px solid red !important;*/
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+  font-family: 'Lato';
+}
+
+@media only screen and (max-width: 500px) {
+  p {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #747704;
+}
+
+h1 {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: 100;
+}
+
+h2 {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: 100;
+}
+
+h3 {
+    display: block;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.myLink {
+  text-align: center;
+  color: #747704;
+}
+
+.myName {
+  text-align: right;
+  color: #747704;
+  font-size: 56px;
+  margin-top: 30px;
+}
+
+.myTitle {
+  text-align: right;
+  color: #747704;
+  font-size: 18px;
+}
+
+.myFeaturedWork {
+  text-align: left;
+  color: #BCBBBB;
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.myWork {
+  text-align: center;
+  color: #747704;
+  font-size: 36px;
+  transform:scale(1.2,1); /* from http://stackoverflow.com/questions/6351013/css-can-i-stretch-text */
+}
+
+.myWorkMarginLeft {
+  margin-right: 20px;
+}
+
+.myWorkMarginCenter {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.myWorkMarginRight {
+  margin-left: 20px;
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    /*padding: 10px;*/
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
