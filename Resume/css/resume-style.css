@@ -1,0 +1,267 @@
+/* Elements */
+* {
+  padding:0;
+  margin:0;
+  /*font-family: 'Abel', sans-serif;*/
+  font-family: 'Lato';
+  color: #140000;
+  font-weight: 300;
+
+}
+
+h1 {
+  font-size: 40px;
+  color: #CC0000;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #999999;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #CC0000;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 17px;
+}
+
+h2, h3, h4, h5 {
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 21px;
+}
+
+a {
+  color: #1199C3;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  padding: 10px;
+}
+
+span {
+  padding: 5px;
+}
+
+/* Classes */
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.section-title {
+  font-weight: bold;
+}
+
+.education-entry, .work-entry, .project-entry, .extra-entry {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.work-entry {
+  font-size: 26px;
+  /*font-weight: bold;*/
+}
+
+.work-link {
+  font-size: 20px;
+}
+
+.work-description {
+  font-size: 18px;
+}
+
+.role-text {
+  text-align: left;
+}
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+  float: right;
+
+}
+
+.welcome-message {
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  /*font-style: italic;*/
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 28px;
+}
+
+#skillsH3 {
+  color: #CC0000;
+  font-style: normal;
+  font-weight: bold;
+  display: none;
+}
+
+.orange {
+  background-color: #CC0000;
+}
+
+.orange-text {
+  color: #CC0000;
+  font-weight: bold;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.gray {
+  background-color: #F3F3F3;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.dark-gray {
+  background-color: #8F8F8F;
+}
+
+/* TODO: Replace with image later */
+#header {
+  background-color: #8F8F8F;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2.5%
+}
+
+#letsConnect {
+  text-align: center;
+}
+
+
+#map {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-left: 2.8%;
+  margin-right: 0%;
+}
+
+#divMap {
+  height: 400px;
+  width: 100%;
+}
+
+
+#skills {
+  font-size: 18px;
+}
+
+/* Media Queries */
+/* Note: The map was kind of funky looking, I could not get the 
+    background gray to appear on the right side.  That is why I am 
+    using the media queries to adjust the margins.
+*/
+@media only screen and (max-width: 1024px) {
+  #letsConnect {
+    margin-top: 5%;
+  }
+  #map {
+    margin-left: 4%;
+    margin-right: 0%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+  #map {
+    margin-left: 2.8%;
+    margin-right: 0%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #letsConnect {
+    margin-top: 8%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+  #map {
+    margin-left: 5%;
+    margin-right: 0%;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  #skillsH3 {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #divMmap {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 360px;
+  }
+}

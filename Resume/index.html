@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--
+  The main HTML code for the resume based on Udacity's Resume Project.  
+  Look at resumeBuilder.js and helper.js to see how the document layout 
+  and style get modified.
+-->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- This tells the browser how to read the document. -->
+  <meta charset="utf-8">
+
+  <!-- Tells the browser what the title of this page should be. -->
+  <title>Roy Morris Resume</title>
+
+  <!-- Load the page styles. -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <link href="css/resume-style.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+</head>
+<body unresolved>
+  <!-- The original layout did not look good on a phone.  Now it does with the help of Bootstrap -->
+  <div id="header" class="container center-content clearfix">
+    <!-- Name -->
+    <div id="divName" class="row">
+      <div id="divSubName" class="col-sm-12">
+        <h1 id="name" class="orange-text"></h1>
+      </div>
+    </div>
+    <!-- Role -->
+    <div id="divRole" class="row">
+      <div id="divSubRole" class="col-sm-12"><span id="role"></span></div>
+    </div>
+    <div id="divLineBreak" class="row">
+      <div id="divSubLineBreak" class="col-sm-12"><hr></div>
+    </div>
+    <!-- Contact Information -->
+    <div id="divTopContacts" class="row">
+      <div id="divEmail" class="col-sm-4"><span class="orange-text">email</span><span id="email" class="white-text"></span></div>
+      <div id="divTwitter" class="col-sm-4"><span class="orange-text">twitter</span><span id="twitter" class="white-text"></span></div>
+      <div id="divGithub" class="col-sm-4"><span class="orange-text">github</span><span id="github" class="white-text"></span></div>
+    </div>
+    <!-- Image and Welcome Message -->
+    <div id="divImageAndWelcome" class="row">
+      <!-- The profile picture is commented out because according to the resume guide, there shouldn't be a personal picture -->
+      <!-- 
+      <div id="profileImage" class="col-md-2">
+        <img src="#" class="biopic">
+      </div> 
+      -->
+      <div id="divWelcome" class="col-md-12">
+        <div id="welcome" class="welcome-message"></div>
+        <div id="topSkills"></div>
+      </div>
+    </div>
+  </div>
+    
+  <div id="content" class="container">
+    <div id="dummy" style='clear: both;' class="row"></div>
+    <!-- Work Experience -->
+    <div id="divWorkExperienceTitle" class='row gray'>
+      <div id="divSubWorkExperienceTitle" class="col-md-12">
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+    </div>
+    <div id="divWorkExperience" class='row gray'>
+      <div id="workExperience" class="col-md-12"></div>
+    </div>
+    <!-- Education -->
+    <div id="divEducationTitle" class='row gray'>
+      <div id="divSubEducationTitle" class="col-md-12">
+        <h2 class="section-title">Education</h2>
+      </div>
+    </div>
+    <div id="divEducation" class='row gray'>
+      <div id="education" class="col-md-12"></div>
+    </div>
+    <!-- Memberships -->
+    <div id="divExtrasTitle" class='row gray'>
+      <div id="divSubExtrasTitle" class="col-md-12">
+        <h2 class="section-title">Memberships</h2>
+      </div>
+    </div>
+    <div id="divExtras" class='row gray'>
+      <div id="extras" class="col-md-12"></div>
+    </div>
+    <!-- The Map -->
+    <div id="divMap1" class='row gray'>
+      <div id="divSumMap1" class="col-md-12">
+        <h2 class="section-title">Where I've Lived and Worked</h2>
+      </div>
+    </div>
+    <div id="divMap" class='row gray'>
+      <div id="map" class="col-md-12 gray"></div>
+    </div>
+  </div>
+
+  <!--
+  The next line tells the browser where to download the JavaScript file you'll be
+  writing. In resumeBuilder.js, you'll be writing code that builds the resume
+  dynamically when this website, index.html, is opened.
+  -->
+  <script src="js/resumeBuilder.js"></script>
+
+
+  <!--
+  These scripts are written in JavaScript. You'll be breaking them down as part of
+  a quiz. Essentially, the next few lines are checking to see if you have not
+  changed each section of the resume. If you have not made any changes to a section
+  of the resume, then that part of the resume does not show up. More on this in the
+  course.
+  -->
+  <script type="text/javascript">
+
+    if(document.getElementsByClassName('flex-item').length === 0) {
+      document.getElementById('topContacts').style.background = 'black';
+    }
+    if(document.getElementsByTagName('h1').length === 0) {
+      document.getElementById('header').style.background = 'black';
+    }
+    if(document.getElementsByClassName('work-entry').length === 0) {
+      document.getElementById('workExperience').style.background = 'black';
+    }
+    if(document.getElementsByClassName('education-entry').length === 0) {
+      document.getElementById('education').style.background = 'black';
+    }
+    if(document.getElementById('map') === null) {
+      document.getElementById('divMap').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
